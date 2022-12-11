@@ -13,6 +13,12 @@ function salvarProduto(produto) {
     return produto 
 }
 
+function deletarProduto(id) {
+    const produto = produtos[i]
+    delete produtos[id]
+    return produto
+}
+
 function getProduto(id) {
     return produtos[id] || {}
 }
@@ -22,4 +28,4 @@ function getProdutos() {
 }
 
 //exportando algumas funções(com excessão do sequente, que é interno)
-module.exports = {salvarProduto, getProduto, getProdutos}
+module.exports = {salvarProduto, getProduto, getProdutos, deletarProduto}
